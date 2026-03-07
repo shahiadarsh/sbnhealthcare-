@@ -108,12 +108,12 @@ const RCMCalculator = () => {
                         {/* Denial Rate */}
                         <div className="group">
                             <div className="flex justify-between items-end mb-6">
-                                <label className="text-slate-900 font-black text-xs uppercase tracking-widest group-hover:text-red-500 transition-colors">Current Denial Index (D.I.)</label>
+                                <label className="text-slate-900 font-black text-xs uppercase tracking-widest group-hover:text-[var(--accent-color)] transition-colors">Current Denial Index (D.I.)</label>
                                 <motion.span
                                     key={denialRate}
                                     initial={{ opacity: 0, y: 10 }}
                                     animate={{ opacity: 1, y: 0 }}
-                                    className="text-red-500 font-black text-3xl tabular-nums"
+                                    className="text-[var(--accent-color)] font-black text-3xl tabular-nums"
                                 >
                                     {denialRate}%
                                 </motion.span>
@@ -125,7 +125,7 @@ const RCMCalculator = () => {
                                 step="1"
                                 value={denialRate}
                                 onChange={(e) => setDenialRate(parseInt(e.target.value))}
-                                className="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-red-500"
+                                className="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-[var(--accent-color)]"
                             />
                             <div className="flex justify-between mt-4 text-[10px] text-slate-400 font-black uppercase tracking-tighter">
                                 <span>1% (Optimal)</span>
@@ -175,7 +175,7 @@ const RCMCalculator = () => {
                                     key={annualLeakage}
                                     initial={{ opacity: 0, scale: 0.95 }}
                                     animate={{ opacity: 1, scale: 1 }}
-                                    className="text-5xl md:text-6xl font-black text-red-400 tracking-tighter tabular-nums"
+                                    className="text-5xl md:text-6xl font-black text-[var(--accent-color)] tracking-tighter tabular-nums"
                                 >
                                     {formatCurrency(annualLeakage)}
                                 </motion.p>
@@ -184,10 +184,10 @@ const RCMCalculator = () => {
                                         <motion.div
                                             initial={{ width: 0 }}
                                             animate={{ width: `${(denialRate / 40) * 100}%` }}
-                                            className="h-full bg-red-500"
+                                            className="h-full bg-[var(--accent-color)]"
                                         />
                                     </div>
-                                    <span className="text-[10px] font-black text-red-400 uppercase tracking-widest whitespace-nowrap">High Exposure</span>
+                                    <span className="text-[10px] font-black text-[var(--accent-color)] uppercase tracking-widest whitespace-nowrap">High Exposure</span>
                                 </div>
                             </motion.div>
 

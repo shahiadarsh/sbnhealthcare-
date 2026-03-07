@@ -42,27 +42,27 @@ const Stats = () => {
     };
 
     return (
-        <section className="relative py-24 md:py-40 bg-white overflow-hidden">
+        <section className="relative py-24 md:py-40 bg-white overflow-hidden border-t border-slate-100">
             {/* Subtle Tech Pattern */}
             <div
-                className="absolute inset-0 opacity-[0.03] pointer-events-none"
+                className="absolute inset-0 opacity-[0.02] pointer-events-none"
                 style={{
                     backgroundImage: `linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px)`,
-                    backgroundSize: '30px 30px'
+                    backgroundSize: '40px 40px'
                 }}
             ></div>
 
             <div className="container mx-auto px-4 relative z-10">
-                <div className="max-w-4xl mx-auto text-center mb-24">
+                <div className="max-w-4xl mx-auto text-center mb-20">
                     <motion.span
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
-                        className="text-[var(--primary-color)] font-black uppercase text-[10px] tracking-[6px] mb-4 inline-block"
+                        className="inline-block bg-[var(--primary-color)]/5 text-[var(--primary-color)] font-black uppercase text-[10px] tracking-[6px] px-6 py-2 rounded-full mb-6"
                     >
                         Network Performance
                     </motion.span>
-                    <h2 className="text-4xl md:text-5xl font-black text-[var(--secondary-color)] tracking-tight leading-tight">
-                        Proven results that justify <br className="hidden md:block" /> your transition to SBN.
+                    <h2 className="text-4xl md:text-5xl font-black text-[var(--secondary-color)] tracking-tighter leading-tight mb-8">
+                        Data-driven outcomes that <br className="hidden md:block" /> define industry leadership.
                     </h2>
                 </div>
 
@@ -70,25 +70,27 @@ const Stats = () => {
                     {statsData.map((stat, index) => (
                         <motion.div
                             key={index}
-                            className="group relative bg-slate-50 p-10 rounded-[2.5rem] border border-slate-100 transition-all duration-500 hover:bg-white hover:shadow-[0_30px_60px_rgba(0,0,0,0.05)] hover:-translate-y-2 overflow-hidden"
+                            className="group relative bg-white p-12 rounded-[3rem] border border-slate-100 transition-all duration-700 hover:shadow-[0_40px_80px_rgba(0,0,0,0.06)] hover:-translate-y-3 overflow-hidden"
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: index * 0.1 }}
                             viewport={{ once: true }}
                         >
                             {/* Decorative Corner Element */}
-                            <div className="absolute top-0 right-0 w-24 h-24 bg-[var(--primary-color)]/5 rounded-bl-full translate-x-12 -translate-y-12 transition-transform group-hover:scale-150 duration-700"></div>
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--primary-color)]/5 rounded-bl-full translate-x-16 -translate-y-16 transition-transform group-hover:scale-150 duration-1000"></div>
 
                             <div className="relative z-10">
-                                <div className="mb-6 flex items-baseline gap-1 focus:outline-none">
-                                    <Counter value={stat.value} />
+                                <div className="mb-0 flex items-baseline gap-1">
+                                    <span className="text-[3.5rem] font-black tracking-tighter text-[var(--secondary-color)] leading-none">
+                                        <Counter value={stat.value} />
+                                    </span>
                                 </div>
-                                <h3 className="text-sm font-black text-[var(--secondary-color)] mb-3 uppercase tracking-widest">
+                                <h3 className="text-[11px] font-black text-[var(--secondary-color)] mb-4 uppercase tracking-[3px] mt-6">
                                     {stat.label}
                                 </h3>
-                                <div className="w-10 h-1 bg-[var(--primary-color)] mb-4 rounded-full transition-all group-hover:w-20 duration-500"></div>
-                                <p className="text-[13px] text-slate-500 font-medium leading-relaxed">
-                                    {statContext[stat.label] || "Accelerated financial results"}
+                                <div className="w-8 h-1 bg-[var(--primary-color)] mb-6 rounded-full transition-all group-hover:w-16 duration-700"></div>
+                                <p className="text-[14px] text-slate-500 font-medium leading-relaxed">
+                                    {statContext[stat.label] || "Accelerated financial results through intelligent automation."}
                                 </p>
                             </div>
                         </motion.div>

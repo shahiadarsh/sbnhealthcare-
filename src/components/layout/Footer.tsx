@@ -14,48 +14,62 @@ const Footer = () => {
     }
 
     return (
-        <footer className="bg-[var(--secondary-color)] pt-[80px] text-white relative">
-            <div className="container mx-auto px-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[30px] mb-[50px]">
-                    <div className="mb-[20px]">
-                        <h3 className="text-[1.25rem] font-bold text-white mb-[20px] relative pb-[10px] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-[30px] after:h-[2px] after:bg-[var(--primary-color)]">
-                            About Us
-                        </h3>
-                        <p className="text-[#e0e0e0] text-[0.95rem] leading-[1.6] mb-[15px]">
-                            We have more than 11+ years of experience in Medical Billing Services. The major benefit of outsourcing billing with SBN Healthcare Solution is an improvement in your financial performance.
+        <footer className="footer-enterprise pt-[80px] pb-[40px] text-white overflow-hidden">
+            {/* Subtle glow effect */}
+            <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[var(--primary-color)]/5 rounded-full blur-[100px] -mr-48 -mt-48 pointer-events-none"></div>
+
+            <div className="container mx-auto px-4 relative z-10">
+                <div className="grid grid-cols-1 min-[480px]:grid-cols-2 lg:grid-cols-12 gap-12 mb-[60px] text-center min-[480px]:text-left">
+                    {/* Brand Info */}
+                    <div className="lg:col-span-4 flex flex-col items-center min-[480px]:items-start">
+                        <div className="mb-6 p-1 bg-white rounded-lg shadow-xl inline-flex">
+                            <img
+                                src="/img/logo.jpg"
+                                alt="SBN Healthcare Solution"
+                                className="h-[60px] md:h-[70px] w-auto"
+                            />
+                        </div>
+                        <p className="text-white/70 text-[0.95rem] leading-[1.8] mb-8 max-w-[320px] mx-auto min-[480px]:mx-0">
+                            Accelerating revenue cycles and improving financial health for modern healthcare practices through expert RCM solutions.
                         </p>
-                        <div className="flex gap-[10px] mt-[20px]">
-                            <a href="https://www.facebook.com/BillingGiant/" target="_blank" className="flex items-center justify-center w-[40px] h-[40px] bg-white/10 text-white rounded-[2px] transition-all duration-300 hover:bg-[var(--primary-color)] hover:text-white">
-                                <FaFacebook />
-                            </a>
-                            <a href="https://twitter.com/sbnhealthcare" target="_blank" className="flex items-center justify-center w-[40px] h-[40px] bg-white/10 text-white rounded-[2px] transition-all duration-300 hover:bg-[var(--primary-color)] hover:text-white">
-                                <FaTwitter />
-                            </a>
-                            <a href="https://in.linkedin.com/company/sbn-healthcare-solution-llc" target="_blank" className="flex items-center justify-center w-[40px] h-[40px] bg-white/10 text-white rounded-[2px] transition-all duration-300 hover:bg-[var(--primary-color)] hover:text-white">
-                                <FaLinkedin />
-                            </a>
+                        <div className="flex gap-4 justify-center min-[480px]:justify-start">
+                            {[
+                                { icon: <FaFacebook />, href: "https://www.facebook.com/BillingGiant/" },
+                                { icon: <FaTwitter />, href: "https://twitter.com/sbnhealthcare" },
+                                { icon: <FaLinkedin />, href: "https://in.linkedin.com/company/sbn-healthcare-solution-llc" }
+                            ].map((social, idx) => (
+                                <a
+                                    key={idx}
+                                    href={social.href}
+                                    target="_blank"
+                                    className="w-10 h-10 bg-white/5 border border-white/10 flex items-center justify-center rounded-xl text-white/50 hover:bg-[var(--primary-color)] hover:text-white hover:border-[var(--primary-color)] transition-all duration-300"
+                                >
+                                    {social.icon}
+                                </a>
+                            ))}
                         </div>
                     </div>
 
-                    <div className="mb-[20px]">
-                        <h3 className="text-[1.25rem] font-bold text-white mb-[20px] relative pb-[10px] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-[30px] after:h-[2px] after:bg-[var(--primary-color)]">
-                            Our Services
-                        </h3>
-                        <ul className="flex flex-col gap-[12px] list-none p-0">
+                    {/* Solutions */}
+                    <div className="lg:col-span-3 lg:ml-auto flex flex-col items-center min-[480px]:items-start">
+                        <h4 className="text-[1rem] md:text-[1.1rem] font-black uppercase tracking-[2px] text-white mb-8 inline-block border-b-2 border-[var(--primary-color)] pb-2">
+                            Solutions
+                        </h4>
+                        <ul className="flex flex-col gap-4 list-none p-0 w-full items-center min-[480px]:items-start">
                             {[
                                 { name: 'Eligibility Verification', href: '/services/eligibility-verification' },
                                 { name: 'Medical Billing', href: '/services/medical-billing' },
                                 { name: 'Medical Coding', href: '/services/medical-coding' },
-                                { name: 'AR Follow-up & Denial Management', href: '/services/ar-follow-up-and-denial-management' },
-                                { name: 'Credentialing & Contracting', href: '/services/credentialing-and-contracting' },
-                                { name: 'RCM Denial Calculator', href: '/rcm-calculator' },
-                                { name: 'Credit Balance Resolution', href: '/services/credit-balance-resolution' }
+                                { name: 'AR & Denials', href: '/services/ar-follow-up-and-denial-management' },
+                                { name: 'Credentialing', href: '/services/credentialing-and-contracting' },
+                                { name: 'Credit Resolution', href: '/services/credit-balance-resolution' }
                             ].map((item) => (
-                                <li key={item.name}>
+                                <li key={item.name} className="flex justify-center min-[480px]:justify-start">
                                     <Link
                                         href={item.href}
-                                        className="text-[#e0e0e0] text-[0.95rem] transition-all duration-300 flex items-center hover:text-[var(--accent-color)] hover:pl-[5px] before:content-['-'] before:mr-[10px] before:text-[var(--primary-color)]"
+                                        className="text-white/60 text-[0.95rem] font-bold hover:text-[var(--primary-color)] transition-all flex items-center gap-2 group no-underline"
                                     >
+                                        <span className="w-1.5 h-1.5 rounded-full bg-[var(--primary-color)] hidden min-[480px]:block opacity-0 group-hover:opacity-100 transition-opacity"></span>
                                         {item.name}
                                     </Link>
                                 </li>
@@ -63,23 +77,24 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    <div className="mb-[20px]">
-                        <h3 className="text-[1.25rem] font-bold text-white mb-[20px] relative pb-[10px] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-[30px] after:h-[2px] after:bg-[var(--primary-color)]">
+                    {/* Corporate */}
+                    <div className="lg:col-span-2 lg:ml-auto flex flex-col items-center min-[480px]:items-start">
+                        <h4 className="text-[1rem] md:text-[1.1rem] font-black uppercase tracking-[2px] text-white mb-8 inline-block border-b-2 border-[var(--primary-color)] pb-2">
                             Quick Links
-                        </h3>
-                        <ul className="flex flex-col gap-[12px] list-none p-0">
+                        </h4>
+                        <ul className="flex flex-col gap-4 list-none p-0 w-full items-center min-[480px]:items-start">
                             {[
-                                { name: 'Home', href: '/' },
                                 { name: 'About Us', href: '/about-us' },
-                                { name: 'Insights / Blog', href: '/blog' },
-                                { name: 'RCM Calculator', href: '/rcm-calculator' },
+                                { name: 'Insights', href: '/blog' },
+                                { name: 'RCM Tool', href: '/rcm-calculator' },
                                 { name: 'Pricing', href: '/pricing' }
                             ].map((item) => (
-                                <li key={item.name}>
+                                <li key={item.name} className="flex justify-center min-[480px]:justify-start">
                                     <Link
                                         href={item.href}
-                                        className="text-[#e0e0e0] text-[0.95rem] transition-all duration-300 flex items-center hover:text-[var(--accent-color)] hover:pl-[5px] before:content-['-'] before:mr-[10px] before:text-[var(--primary-color)]"
+                                        className="text-white/60 text-[0.95rem] font-bold hover:text-[var(--primary-color)] transition-all flex items-center gap-2 group no-underline"
                                     >
+                                        <span className="w-1.5 h-1.5 rounded-full bg-[var(--primary-color)] hidden min-[480px]:block opacity-0 group-hover:opacity-100 transition-opacity"></span>
                                         {item.name}
                                     </Link>
                                 </li>
@@ -87,25 +102,34 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    <div className="mb-[20px]">
-                        <h3 className="text-[1.25rem] font-bold text-white mb-[20px] relative pb-[10px] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-[30px] after:h-[2px] after:bg-[var(--primary-color)]">
-                            Contact Us
-                        </h3>
-                        <p className="text-[#e0e0e0] text-[0.95rem] leading-[1.6] mb-[5px]">1309 COFFEEN AVENUE STE</p>
-                        <p className="text-[#e0e0e0] text-[0.95rem] leading-[1.6] mb-[20px]">1200 SHERIDAN, WY 82801</p>
-                        <p className="text-[#e0e0e0] text-[0.95rem] leading-[1.6] mb-[5px]">
-                            <strong className="text-white">Phone:</strong> (805)426-4609
-                        </p>
-                        <p className="text-[#e0e0e0] text-[0.95rem] leading-[1.6]">
-                            <strong className="text-white">Email:</strong> info@sbnhealthcaresolution.com
-                        </p>
+                    {/* HQ */}
+                    <div className="lg:col-span-3 lg:ml-auto flex flex-col items-center min-[480px]:items-start">
+                        <h4 className="text-[1rem] md:text-[1.1rem] font-black uppercase tracking-[2px] text-white mb-8 inline-block border-b-2 border-[var(--primary-color)] pb-2">
+                            Headquarters
+                        </h4>
+                        <div className="space-y-6 flex flex-col items-center min-[480px]:items-start w-full">
+                            <div className="text-white/50 text-[0.95rem] md:text-[1rem] leading-[1.8]">
+                                1309 Coffeen Avenue Ste 1200<br />
+                                Sheridan, WY 82801
+                            </div>
+                            <div className="space-y-3 w-full flex flex-col items-center min-[480px]:items-start">
+                                <p className="text-white/50 text-[0.95rem] flex items-center gap-3">
+                                    <strong className="text-white font-black text-[10px] uppercase tracking-widest bg-white/5 px-2 py-1 rounded">PH</strong>
+                                    (805) 426-4609
+                                </p>
+                                <p className="text-white/50 text-[0.95rem] flex items-center gap-3">
+                                    <strong className="text-white font-black text-[10px] uppercase tracking-widest bg-white/5 px-2 py-1 rounded">EX</strong>
+                                    info@sbnhealthcaresolution.com
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div className="bg-[#081624] py-[25px] text-center text-[#aaa] text-[0.9rem]">
+            <div className="border-t border-white/5 pt-8 pb-4 text-center text-white/30 text-[0.85rem] font-medium">
                 <div className="container mx-auto px-4">
-                    &copy; {new Date().getFullYear()} SBN Healthcare Solution. All rights reserved.
+                    &copy; {new Date().getFullYear()} SBN Healthcare Solution. Certified Medical Billing Services.
                 </div>
             </div>
         </footer>

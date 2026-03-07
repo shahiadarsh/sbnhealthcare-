@@ -196,7 +196,7 @@ button {
   height: 600px;
   background: radial-gradient(circle, rgba(0, 242, 255, 0.08), transparent 70%);
   border-radius: full;
-  blur: 100px;
+  filter: blur(100px);
   transform: translate(25%, -50%);
   pointer-events: none;
   z-index: 0;
@@ -289,4 +289,10 @@ button {
   50% {
     transform: perspective(1200px) rotateY(-10deg) rotateX(2deg) translateY(-15px);
   }
+}
+
+.footer-enterprise {
+  background: linear-gradient(180deg, #0B1F33 0%, #071624 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
 }

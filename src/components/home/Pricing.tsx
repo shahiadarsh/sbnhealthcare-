@@ -7,10 +7,10 @@ import { pricingModels } from '@/data/pricing';
 
 const Pricing = () => {
     return (
-        <section className="relative py-32 md:py-48 bg-slate-50 overflow-hidden border-y border-slate-100">
+        <section className="relative py-32 md:py-48 bg-white overflow-hidden border-t border-slate-100">
             {/* Subtle Tech Pattern */}
             <div
-                className="absolute inset-0 opacity-[0.03] pointer-events-none"
+                className="absolute inset-0 opacity-[0.02] pointer-events-none"
                 style={{
                     backgroundImage: `linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px)`,
                     backgroundSize: '40px 40px'
@@ -26,12 +26,11 @@ const Pricing = () => {
                     >
                         Investment Models
                     </motion.span>
-                    <h2 className="text-4xl md:text-5xl font-black text-[var(--secondary-color)] mb-8 tracking-tight leading-[1.1]">
-                        Surgical Pricing Models. <br className="hidden md:block" /> Performance-Based ROI.
+                    <h2 className="text-4xl md:text-6xl font-black text-[var(--secondary-color)] mb-8 tracking-tighter leading-[1.05]">
+                        Surgical Pricing Models. <br className="hidden md:block" /> Guaranteed Performance.
                     </h2>
-                    <p className="text-slate-500 text-[1.2rem] leading-relaxed font-medium tracking-tight max-w-3xl mx-auto">
-                        We align our success directly with yours. Transparent, results-oriented pricing structures
-                        designed to eliminate administrative overhead and maximize net collections.
+                    <p className="text-slate-500 text-[1.1rem] md:text-[1.25rem] leading-relaxed font-medium tracking-tight max-w-3xl mx-auto">
+                        We align our success directly with yours. Our transparent, results-oriented pricing is engineered to eliminate overhead and maximize your bottom line.
                     </p>
                 </div>
 

@@ -8,8 +8,15 @@ import { heroData } from '@/data/home';
 const Hero = () => {
     return (
         <section className="hero-enterprise-bg min-h-screen py-[120px] lg:py-0 flex items-center overflow-hidden border-b border-white/5">
-            {/* Layer 2: Subtle Motion */}
-            <div className="animated-grid-overlay"></div>
+            {/* Layer 2: Subtle Motion Video */}
+            <video
+                src="/img/v1.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover opacity-[0.15] pointer-events-none z-0"
+            />
 
             {/* Layer 1.5: Radial Highlight */}
             <div className="hero-radial-glow"></div>

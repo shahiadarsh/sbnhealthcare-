@@ -21,7 +21,7 @@ const ProblemSnapshot: React.FC<ProblemSnapshotProps> = ({ points, title, descri
             <div className="container mx-auto px-4">
                 <div className="flex flex-col lg:flex-row gap-16 items-start">
                     <div className="lg:w-1/3">
-                        <span className="text-red-500 font-black uppercase text-[10px] tracking-[4px] mb-4 block flex items-center gap-2">
+                        <span className="text-[var(--primary-color)] font-black uppercase text-[10px] tracking-[4px] mb-4 block flex items-center gap-2">
                             <FaExclamationTriangle /> Critical Challenges
                         </span>
                         <h2 className="text-4xl font-black text-[var(--secondary-color)] tracking-tight mb-6">
@@ -39,9 +39,9 @@ const ProblemSnapshot: React.FC<ProblemSnapshotProps> = ({ points, title, descri
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.1 }}
-                                className="p-8 rounded-[2rem] bg-red-50/30 border border-red-100 group hover:bg-red-50 transition-colors"
+                                className="p-8 rounded-[2rem] bg-[var(--primary-color)]/5 border border-[var(--primary-color)]/10 group hover:bg-[var(--primary-color)]/10 transition-colors"
                             >
-                                <h3 className="text-lg font-black text-red-700 mb-3 uppercase tracking-wide">
+                                <h3 className="text-lg font-black text-[var(--secondary-color)] mb-3 uppercase tracking-wide">
                                     {point.title}
                                 </h3>
                                 <p className="text-slate-600 font-medium text-sm leading-relaxed">
