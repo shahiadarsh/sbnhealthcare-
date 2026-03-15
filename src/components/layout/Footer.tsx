@@ -14,7 +14,7 @@ const Footer = () => {
     }
 
     return (
-        <footer className="footer-enterprise pt-[80px] pb-[40px] text-white overflow-hidden">
+        <footer className="relative pt-[80px] pb-[40px] text-white overflow-hidden bg-gradient-to-br from-[#0f2027] via-[#203a43] to-[#2c5364] shadow-[0_-10px_40px_rgba(0,0,0,0.3)]">
             {/* Subtle glow effect */}
             <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[var(--primary-color)]/5 rounded-full blur-[100px] -mr-48 -mt-48 pointer-events-none"></div>
 
@@ -42,7 +42,7 @@ const Footer = () => {
                                     key={idx}
                                     href={social.href}
                                     target="_blank"
-                                    className="w-10 h-10 bg-white/5 border border-white/10 flex items-center justify-center rounded-xl text-white/50 hover:bg-[var(--primary-color)] hover:text-white hover:border-[var(--primary-color)] transition-all duration-300"
+                                    className="w-10 h-10 bg-white/5 border border-white/10 flex items-center justify-center rounded-full text-white/50 hover:bg-[#00e5ff] hover:text-[#0f2027] hover:shadow-[0_0_15px_rgba(0,229,255,0.6)] transition-all duration-300 active:scale-90"
                                 >
                                     {social.icon}
                                 </a>
@@ -52,7 +52,7 @@ const Footer = () => {
 
                     {/* Solutions */}
                     <div className="lg:col-span-3 lg:ml-auto flex flex-col items-center min-[480px]:items-start">
-                        <h4 className="text-[1rem] md:text-[1.1rem] font-black uppercase tracking-[2px] text-white mb-8 inline-block border-b-2 border-[var(--primary-color)] pb-2">
+                        <h4 className="text-[1rem] md:text-[1.1rem] font-black uppercase tracking-[2px] text-[#00e5ff] mb-8 inline-block border-b-2 border-[#00e5ff]/30 pb-2">
                             Solutions
                         </h4>
                         <ul className="flex flex-col gap-4 list-none p-0 w-full items-center min-[480px]:items-start">
@@ -67,9 +67,9 @@ const Footer = () => {
                                 <li key={item.name} className="flex justify-center min-[480px]:justify-start">
                                     <Link
                                         href={item.href}
-                                        className="text-white/60 text-[0.95rem] font-bold hover:text-[var(--primary-color)] transition-all flex items-center gap-2 group no-underline"
+                                        className="text-[#d1d5db] text-[0.95rem] font-medium hover:text-[#00e5ff] transition-all flex items-center gap-2 group no-underline hover:-translate-x-1"
                                     >
-                                        <span className="w-1.5 h-1.5 rounded-full bg-[var(--primary-color)] hidden min-[480px]:block opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                        <span className="w-1.5 h-1.5 rounded-full bg-[#00e5ff] hidden min-[480px]:block opacity-0 group-hover:opacity-100 transition-opacity"></span>
                                         {item.name}
                                     </Link>
                                 </li>
@@ -79,7 +79,7 @@ const Footer = () => {
 
                     {/* Corporate */}
                     <div className="lg:col-span-2 lg:ml-auto flex flex-col items-center min-[480px]:items-start">
-                        <h4 className="text-[1rem] md:text-[1.1rem] font-black uppercase tracking-[2px] text-white mb-8 inline-block border-b-2 border-[var(--primary-color)] pb-2">
+                        <h4 className="text-[1rem] md:text-[1.1rem] font-black uppercase tracking-[2px] text-[#00e5ff] mb-8 inline-block border-b-2 border-[#00e5ff]/30 pb-2">
                             Quick Links
                         </h4>
                         <ul className="flex flex-col gap-4 list-none p-0 w-full items-center min-[480px]:items-start">
@@ -92,9 +92,9 @@ const Footer = () => {
                                 <li key={item.name} className="flex justify-center min-[480px]:justify-start">
                                     <Link
                                         href={item.href}
-                                        className="text-white/60 text-[0.95rem] font-bold hover:text-[var(--primary-color)] transition-all flex items-center gap-2 group no-underline"
+                                        className="text-[#d1d5db] text-[0.95rem] font-medium hover:text-[#00e5ff] transition-all flex items-center gap-2 group no-underline hover:-translate-x-1"
                                     >
-                                        <span className="w-1.5 h-1.5 rounded-full bg-[var(--primary-color)] hidden min-[480px]:block opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                        <span className="w-1.5 h-1.5 rounded-full bg-[#00e5ff] hidden min-[480px]:block opacity-0 group-hover:opacity-100 transition-opacity"></span>
                                         {item.name}
                                     </Link>
                                 </li>
@@ -104,7 +104,7 @@ const Footer = () => {
 
                     {/* HQ */}
                     <div className="lg:col-span-3 lg:ml-auto flex flex-col items-center min-[480px]:items-start">
-                        <h4 className="text-[1rem] md:text-[1.1rem] font-black uppercase tracking-[2px] text-white mb-8 inline-block border-b-2 border-[var(--primary-color)] pb-2">
+                        <h4 className="text-[1rem] md:text-[1.1rem] font-black uppercase tracking-[2px] text-[#00e5ff] mb-8 inline-block border-b-2 border-[#00e5ff]/30 pb-2">
                             Headquarters
                         </h4>
                         <div className="space-y-6 flex flex-col items-center min-[480px]:items-start w-full">

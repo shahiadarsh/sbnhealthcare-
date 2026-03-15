@@ -19,6 +19,7 @@ export default function PricingPage() {
                 title="Smart Pricing. Fast ROI."
                 subtitle="Investment Models"
                 description="Choose the best pricing model that fits your practice's needs. We offer flexible plans to ensure you get the best value, reducing your costs while minimizing risk."
+                bgImage="/img/pricing.jpg"
             />
 
             <section className="py-24">

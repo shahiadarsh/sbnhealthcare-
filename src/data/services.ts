@@ -109,6 +109,91 @@ export const specialtiesList: Service[] = [
                 ]
             }
         ]
+    },
+    {
+        title: "Urgent Care & Telehealth",
+        slug: "urgent-care-telehealth",
+        bannerTitle: "Optimized RCM for Urgent Care & Telehealth",
+        description: "Accelerating revenue for high-volume urgent care centers and virtual health platforms.",
+        sections: [
+            {
+                type: 'problem-snapshot',
+                title: 'High-Velocity Billing Challenges',
+                data: [
+                    { title: 'Real-Time Verification', description: 'Urgent care requires instant insurance validation to prevent front-end revenue leakage.' },
+                    { title: 'Telehealth Modifiers', description: 'Navigating frequently changing POS and GT/95 modifier rules for virtual visits.' },
+                    { title: 'Volume Management', description: 'Processing high volumes of encounters without sacrificing coding accuracy or speed.' }
+                ]
+            },
+            {
+                type: 'workflow',
+                title: 'Rapid-Response Billing Cycle',
+                subtitle: 'Velocity Verified',
+                data: [
+                    { title: 'Verify', description: 'Instant, automated eligibility checks before the patient is seen.' },
+                    { title: 'Code', description: 'Same-day coding of urgent care encounters with specialized modifier logic.' },
+                    { title: 'Submit', description: 'Real-time claim submission to ensure the fastest possible reimbursement.' },
+                    { title: 'Monitor', description: '24/7 surveillance of claim status to catch and fix rejections immediately.' }
+                ]
+            },
+            {
+                type: 'kpi',
+                title: 'Urgent Care Impact',
+                subtitle: 'Operational Speed',
+                data: [
+                    { value: '48h', label: 'Billing Turnaround', description: 'Average time from encounter to clean claim submission.' },
+                    { value: '20%', label: 'Efficiency Gain', description: 'Reduction in administrative overhead for clinic staff.' }
+                ]
+            },
+            {
+                type: 'ai-indicator',
+                stage: 'Virtual Visit Compliance',
+                description: 'Our AI engine automatically validates telehealth-specific coding requirements based on the latest state and payer guidelines.',
+                data: '100% Compliance Accuracy'
+            }
+        ]
+    },
+    {
+        title: "Small–Mid Practices",
+        slug: "small-mid-practices",
+        bannerTitle: "Enterprise-Grade Solutions for Independent Practices",
+        description: "Empowering small to mid-sized practices with high-performance revenue cycle management.",
+        sections: [
+            {
+                type: 'problem-snapshot',
+                title: 'Small Practice Constraints',
+                data: [
+                    { title: 'Limited Resources', description: 'Staff stretched thin between patient care and administrative billing tasks.' },
+                    { title: 'Inconsistent Cash Flow', description: 'Fluctuations in revenue due to delayed billing or high denial rates.' },
+                    { title: 'Overhead Pressure', description: 'The high cost of maintaining expert in-house billing and coding teams.' }
+                ]
+            },
+            {
+                type: 'workflow',
+                title: 'Seamless Integration Workflow',
+                subtitle: 'Simplified Management',
+                data: [
+                    { title: 'Connect', description: 'Direct integration with your existing EMR/EHR system for data flow.' },
+                    { title: 'Manage', description: 'Full-service management of charges, payments, and denials.' },
+                    { title: 'Report', description: 'Monthly transparency reports on practice performance and financial health.' },
+                    { title: 'Consult', description: 'Regular strategy sessions to optimize operations and growth.' }
+                ]
+            },
+            {
+                type: 'kpi',
+                title: 'Practice Growth',
+                subtitle: 'Financial Strength',
+                data: [
+                    { value: '18%', label: 'Revenue Growth', description: 'Average increase for independent practices in their first year with SBN.' },
+                    { value: '100%', label: 'Peace of Mind', description: 'Total focus on patients while we handle the complexities of RCM.' }
+                ]
+            },
+            {
+                title: "Ready to Scale Your Practice?",
+                content: "Experience the benefits of a full-scale billing department without the overhead. Let's build your financial future together.",
+                type: "cta"
+            }
+        ]
     }
 ];
 

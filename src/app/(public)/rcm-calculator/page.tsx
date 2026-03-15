@@ -19,6 +19,7 @@ export default function RCMCalculatorPage() {
                 title="Denial & ROI Calculator"
                 subtitle="Financial Intelligence"
                 description="Quantify your revenue leakage. Our interactive calculator uses industry benchmarks to visualize your recovery potential and the impact of optimized billing."
+                bgImage="/img/RCM calculator.jpg"
             />
 
             <section className="py-24 md:py-32">

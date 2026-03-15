@@ -17,6 +17,7 @@ const Security = () => {
                 title="Security & Compliance"
                 subtitle="Vigilant Stewardship"
                 description="An innovation-driven governance framework designed to protect the integrity of healthcare data through proactive risk mitigation and audit-ready infrastructure."
+                bgImage="/img/complinace&security.jpg"
             />
 
             {/* HIPAA Leadership Statement */}

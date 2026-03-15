@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { getDynamicMetadata } from '@/utils/seo';
 import PageHeader from '@/components/layout/PageHeader';
 import ContactForm from '@/components/contact/ContactForm';
+import ContactDetails from '@/components/contact/ContactDetails';
 
 export async function generateMetadata(): Promise<Metadata> {
     const dynamic = await getDynamicMetadata('contact-us');
@@ -22,24 +23,8 @@ export default function ContactUs() {
             />
 
             <div className="container mx-auto px-4 py-24">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-[50px]">
-                    <div>
-                        <div className="flex flex-col gap-[30px]">
-                            <div>
-                                <h3 className="text-[var(--primary-color)] mb-[5px] text-[1.2rem] font-bold">Email</h3>
-                                <p className="text-[var(--text-color)] text-[1.1rem]">info@sbnhealthcaresolution.com</p>
-                            </div>
-                            <div>
-                                <h3 className="text-[var(--primary-color)] mb-[5px] text-[1.2rem] font-bold">Phone</h3>
-                                <p className="text-[var(--text-color)] text-[1.1rem]">+1 (123) 456-7890</p>
-                            </div>
-                            <div>
-                                <h3 className="text-[var(--primary-color)] mb-[5px] text-[1.2rem] font-bold">Address</h3>
-                                <p className="text-[var(--text-color)] text-[1.1rem]">Your Business Address Here<br />City, State, Zip Code</p>
-                            </div>
-                        </div>
-                    </div>
-
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
+                    <ContactDetails />
                     <ContactForm />
                 </div>
             </div>
